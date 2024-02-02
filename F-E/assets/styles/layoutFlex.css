@@ -1,0 +1,33 @@
+/*flexbox container is created by declaring display:flex or display:inline-flex*/
+/*properties of flex>>
+flex-direction: row or column specifies the direction the flexbox children are laid
+flex-direction: row-reverse or column-reverse to lay flex items in reverse direction
+flex-wrap: wrap to prevent flex items from breaking from their container
+flex-flow: row-wrap or column-rap to achieve same thing as flexwrap
+flex: 1 to indicate what portion of space, flex items take compare to ther items
+align-items: centre,etc to acvieve flexbox alignment of items
+justify-content: space-around
+align-self:flex-end to override alignItems for individual flex items
+order:1 to change the poistion of flex itemswithout affecting source order(flex-ordering) */
+*{
+  box-sizing: border-box;
+}
+:root {
+  --main-text-color: white;
+}
+.flex {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.flexItems {
+  background-color: deeppink;
+  flex: 1 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 7px;
+  color: var(--main-text-color);
+}
+.flexItems:nth-child(3) {
+  order: 4;
+}
