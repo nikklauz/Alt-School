@@ -1,0 +1,35 @@
+.glass, .info {
+  box-sizing: border-box;
+}
+/*grid display*/
+.grid {
+  display: grid;
+  /*grid-template-columns: 200px 200px 200px;*/
+  grid-template-columns: 1fr 1fr 1fr; /*"fr" unit to represent i fraction of the available space in the grid container(we divided into 3 equalparts)*/
+  /*grid-template-columns: 300px 1fr 1fr; --combination of fixed sizes and fr style */
+  column-gap: 15px;
+}
+/*making lage grids with many tracks using repeat() notation as an alternative to above style*/
+.glassgrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /*grid-template-columns: 20px repeat(6, 1fr) 20px; combination of repeat, fixed and fr*/
+  grid-auto-rows: 200px;/*used to assign a fixed height to your column element*/
+  /*grid-template-rows: minmax(100, auto); use of minmax() to set size of cells in the grid*/
+  column-gap: 10px; /*Grid gutters:::use "row-gap" for grid rows*/
+}
+.glass {
+  background-color: darkturquoise;
+}
+#lore {
+  background-color: gray;
+  color: blue;
+}
+#altrepo {
+  background-color: chocolate;
+  color: #ffff;
+}
+#vsdocuments {
+  background-color: cornflowerblue;
+  color: crimson;
+}
